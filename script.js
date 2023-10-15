@@ -1,7 +1,12 @@
-const addBtn = document.querySelector('#addBtn');
-addBtn.addEventListener('click', addBookToLibrary);
+const addBtn = document.getElementById('addBtn');
 
-const newBookBtn = document.querySelector('#newBtn');
+addBtn.addEventListener('click', () => {
+    if(form.title.value !== '' && form.author.value !== '' && form.pages.value !== '') {
+        addBookToLibrary();
+    } 
+});
+
+const newBookBtn = document.getElementById('newBtn');
 newBookBtn.addEventListener('click', () => popUpForm.style.display = 'block');
 
 const popUpForm = document.getElementById('popUp');
